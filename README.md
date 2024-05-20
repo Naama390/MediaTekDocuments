@@ -75,3 +75,15 @@ Ce mode opératoire permet d'installer l'application pour pouvoir travailler des
 - Installer Visual Studio 2019 entreprise et les extension Specflow et newtonsoft.json (pour ce dernier, voir l'article "Accéder à une API REST à partir d'une application C#" dans le wiki de ce dépôt : consulter juste le début pour la configuration, car la suite permet de comprendre le code existant).<br>
 - Télécharger le code et le dézipper puis renommer le dossier en "mediatekdocuments".<br>
 - Récupérer et installer l'API REST nécessaire (https://github.com/CNED-SLAM/rest_mediatekdocuments) ainsi que la base de données (les explications sont données dans le readme correspondant).
+### Ajout de fonctionnalités
+- Un nouvel onglet permet de gérer les commandes de livres.
+- Sur toutes les colonnes il est possible d'effectuer un tri.
+- Il est possible de rechercher un livre par on numéro et d'afficher ses informations, ainsi que la liste des commandes, triées par date. La liste des commandes affiche les informations suivantes: date de la commande, montant, nombre d'exemplaires commandés et étape de suivi de la commande.
+- Possibilité de saisir les informations d'une nouvelle commande et de l'enregistrer.
+- Possibilité de modifier l'étape de suivi d'une commande (sous certaines conditions).
+- Possibilité de supprimer une commande uniquement si elle n'est pas encore livrée.
+  ![img4](https://github.com/Naama390/MediaTekDocuments/blob/master/IMG/UML%20Projet%20mediatekDocuments.jpeg)
+
+
+
+
