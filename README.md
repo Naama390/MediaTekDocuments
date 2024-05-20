@@ -78,7 +78,7 @@ Ce mode opératoire permet d'installer l'application pour pouvoir travailler des
 ### Ajout de fonctionnalités
 - Un nouvel onglet permet de gérer les commandes de livres.
 - Sur toutes les colonnes il est possible d'effectuer un tri.
-- Il est possible de rechercher un livre par on numéro et d'afficher ses informations, ainsi que la liste des commandes, triées par date. La liste des commandes affiche les informations suivantes: date de la commande, montant, nombre d'exemplaires commandés et étape de suivi de la commande.
+- Il est possible de rechercher un livre par son numéro et d'afficher ses informations, ainsi que la liste des commandes, triées par date. La liste des commandes affiche les informations suivantes: date de la commande, montant, nombre d'exemplaires commandés et étape de suivi de la commande.
 - Possibilité de saisir les informations d'une nouvelle commande et de l'enregistrer.
 - Possibilité de modifier l'étape de suivi d'une commande (sous certaines conditions).
 - Possibilité de supprimer une commande uniquement si elle n'est pas encore livrée.
