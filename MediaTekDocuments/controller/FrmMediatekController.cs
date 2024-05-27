@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using MediaTekDocuments.dal;
 using MediaTekDocuments.model;
-using MediaTekDocuments.dal;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 
 namespace MediaTekDocuments.controller
 {
@@ -95,6 +97,51 @@ namespace MediaTekDocuments.controller
         public bool CreerExemplaire(Exemplaire exemplaire)
         {
             return access.CreerExemplaire(exemplaire);
+        }
+
+        /// <summary>
+        /// récèpère toutes les commandes d'un document
+        /// </summary>
+        /// <param name="idDocument"></param>
+        /// <returns>Liste d'objets Commande</returns>
+
+        public List<CommandeDocument> GetAllCommandes()
+        {
+            return access.GetAllCommandes();
+        }
+
+        /// <summary>
+        /// récupère les commandes d'un document
+        /// </summary>
+        /// <param name="idDocument">id du document concerné</param>
+        /// <returns>Liste d'objets CommandeDocument</returns>
+        public List<CommandeDocument> GetCommandesDocument(string idDocument)
+        {
+            return access.GetCommandesDocument(idDocument);
+        }
+
+        /// </summary>
+        /// <param name="id">id de la commande à insérer</param>
+        /// <param name="nbExemplaire">nb d'exemplaires de la commande</param>
+        /// <param name="idLivreDvd">id du document a commander</param>
+        /// <param name="dateCommande">date de la commande</param>
+        /// <param name="montant">montant de la commande</param>
+        /// <param name="etapeSuivi">etape de suivi de la commande</param>
+        /// <returns>True si la création a pu se faire</returns>
+        public bool CreerCommandeDocument(string id, int nbExemplaire, string idLivreDvd, string dateCommande, int montant, string etapeSuivi)
+        {
+            CommandeDocument commandeDocument = new CommandeDocument(id, nbExemplaire, idLivreDvd, dateCommande, montant, etapeSuivi);
+            return access.CreerCommandeDocument(commandeDocument);
+        }
+
+        /// <summary>
+        /// Suppression d'une commande dans la bdd
+        /// </summary>
+        /// <param name="commande">L'objet Commande concerné</param>
+        /// <returns>True si la création a pu se faire</returns>
+        public bool SupprCommande(CommandeDocument commande)
+        {
+            return access.SupprCommande(commande);
         }
     }
 }

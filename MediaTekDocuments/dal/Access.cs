@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MediaTekDocuments.manager;
 using MediaTekDocuments.model;
-using MediaTekDocuments.manager;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
-using System.Configuration;
+using Serilog;
+using System;
+using System.Collections.Generic;
 
 namespace MediaTekDocuments.dal
 {
@@ -143,6 +143,31 @@ namespace MediaTekDocuments.dal
         }
 
         /// <summary>
+        /// Retourne les commandes
+        /// </summary>
+        /// <param name="idDocument">id du document concerné</param>
+        /// <returns>Liste d'objets Commande</returns>
+
+        public List<CommandeDocument> GetAllCommandes()
+        {
+            List<CommandeDocument> lesCommandesDocuments = TraitementRecup<CommandeDocument>(GET, "commandedocument");
+            return lesCommandesDocuments;
+        }
+
+        /// <summary>
+        /// Retourne les commandes d'un document
+        /// </summary>
+        /// <param name="idDocument">id du document concerné</param>
+        /// <returns>Liste d'objets CommandeDocument</returns>
+
+        public List<CommandeDocument> GetCommandesDocument(string idDocument)
+        {
+            String jsonIdDocument = convertToJson("id", idDocument);
+            List<CommandeDocument> lesCommandesDocument = TraitementRecup<CommandeDocument>(GET, "commandedocument/" + jsonIdDocument);
+            return lesCommandesDocument;
+        }
+
+        /// <summary>
         /// ecriture d'un exemplaire en base de données
         /// </summary>
         /// <param name="exemplaire">exemplaire à insérer</param>
@@ -157,9 +182,55 @@ namespace MediaTekDocuments.dal
             }
             catch (Exception ex)
             {
+                Log.Error(ex, "Access.CreerExemplaire catch type erreur={0} champs={1}", ex, jsonExemplaire);
                 Console.WriteLine(ex.Message);
             }
             return false; 
+        }
+
+        /// <summary>
+        /// Créer une entite dans la BDD, return true si l'opération, c'est correctement déroulé
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="jsonEntite"></param>
+        /// <returns></returns>
+        public bool CreerCommandeDocument(CommandeDocument commandedocument)
+        {
+            String jsonCommandedocument = JsonConvert.SerializeObject(commandedocument);
+            try
+            {
+                Console.WriteLine(uriApi + "lacommandedocument/" + jsonCommandedocument);
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<CommandeDocument> liste = TraitementRecup<CommandeDocument>(POST, "lacommandedocument/" + jsonCommandedocument);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Access.CreerCommandeDocument catch type erreur={0}, table={1}, champs={2}", ex, commandedocument, jsonCommandedocument);
+                Console.WriteLine(ex.Message);
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Suppression d'une commande en base de données
+        /// </summary>
+        /// <param name="commande">exemplaire à insérer</param>
+        /// <returns>true si la suppression a pu se faire (retour != null)</returns>
+            public bool SupprCommande(CommandeDocument commande)
+        {
+            String jsonCommande = JsonConvert.SerializeObject(commande, new CustomDateTimeConverter());
+            try
+            {
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<CommandeDocument> liste = TraitementRecup<CommandeDocument>(POST, "commande/" + jsonCommande);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return false;
         }
 
         /// <summary>
@@ -185,6 +256,10 @@ namespace MediaTekDocuments.dal
                         String resultString = JsonConvert.SerializeObject(retour["result"]);
                         // construction de la liste d'objets à partir du retour de l'api
                         liste = JsonConvert.DeserializeObject<List<T>>(resultString, new CustomBooleanJsonConverter());
+                    }
+                    else
+                    {
+                        Console.WriteLine("Reussite");
                     }
                 }
                 else
