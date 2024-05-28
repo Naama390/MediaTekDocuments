@@ -143,5 +143,15 @@ namespace MediaTekDocuments.controller
         {
             return access.SupprCommande(commande);
         }
+
+        /// <summary>
+        /// Modification d'une commande dans la bdd
+        /// </summary>
+        /// <param name="commande">L'objet Commande concerné</param>
+        /// <returns>True si la modification a pu se faire</returns>
+        public bool ModifierSuivi(string id, string etapeSuivi)
+        {
+            return access.ModifierSuivi(id, etapeSuivi);
+        }
     }
 }

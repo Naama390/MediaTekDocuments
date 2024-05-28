@@ -224,52 +224,6 @@ namespace MediaTekDocuments.view
             this.txbLivresDocRecherche = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
-            this.tabCommandesDvd = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dgvCommandesDvdListe = new System.Windows.Forms.DataGridView();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label65 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label81 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.label90 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
-            this.label92 = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.label94 = new System.Windows.Forms.Label();
-            this.label95 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label97 = new System.Windows.Forms.Label();
             this.tabOngletsApplication.SuspendLayout();
             this.tabLivres.SuspendLayout();
             this.grpLivresInfos.SuspendLayout();
@@ -301,13 +255,6 @@ namespace MediaTekDocuments.view
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownNbExemplairsNvlCmd)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.tabCommandesDvd.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCommandesDvdListe)).BeginInit();
-            this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox7.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabOngletsApplication
@@ -318,7 +265,6 @@ namespace MediaTekDocuments.view
             this.tabOngletsApplication.Controls.Add(this.tabRevues);
             this.tabOngletsApplication.Controls.Add(this.tabReceptionRevue);
             this.tabOngletsApplication.Controls.Add(this.tabCommandesLivres);
-            this.tabOngletsApplication.Controls.Add(this.tabCommandesDvd);
             this.tabOngletsApplication.ItemSize = new System.Drawing.Size(49, 18);
             this.tabOngletsApplication.Location = new System.Drawing.Point(2, 1);
             this.tabOngletsApplication.Margin = new System.Windows.Forms.Padding(4);
@@ -335,7 +281,7 @@ namespace MediaTekDocuments.view
             this.tabLivres.Location = new System.Drawing.Point(4, 22);
             this.tabLivres.Margin = new System.Windows.Forms.Padding(4);
             this.tabLivres.Name = "tabLivres";
-            this.tabLivres.Size = new System.Drawing.Size(1301, 1024);
+            this.tabLivres.Size = new System.Drawing.Size(1343, 1024);
             this.tabLivres.TabIndex = 2;
             this.tabLivres.Text = "Livres";
             this.tabLivres.UseVisualStyleBackColor = true;
@@ -774,7 +720,7 @@ namespace MediaTekDocuments.view
             this.tabDvd.Location = new System.Drawing.Point(4, 22);
             this.tabDvd.Margin = new System.Windows.Forms.Padding(4);
             this.tabDvd.Name = "tabDvd";
-            this.tabDvd.Size = new System.Drawing.Size(1301, 1024);
+            this.tabDvd.Size = new System.Drawing.Size(1343, 1024);
             this.tabDvd.TabIndex = 3;
             this.tabDvd.Text = "DVD";
             this.tabDvd.UseVisualStyleBackColor = true;
@@ -1217,7 +1163,7 @@ namespace MediaTekDocuments.view
             this.tabRevues.Margin = new System.Windows.Forms.Padding(4);
             this.tabRevues.Name = "tabRevues";
             this.tabRevues.Padding = new System.Windows.Forms.Padding(4);
-            this.tabRevues.Size = new System.Drawing.Size(1301, 1024);
+            this.tabRevues.Size = new System.Drawing.Size(1343, 1024);
             this.tabRevues.TabIndex = 1;
             this.tabRevues.Text = "Revues";
             this.tabRevues.UseVisualStyleBackColor = true;
@@ -2095,6 +2041,7 @@ namespace MediaTekDocuments.view
             this.dgvCmdLivresListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCmdLivresListe.Size = new System.Drawing.Size(1266, 277);
             this.dgvCmdLivresListe.TabIndex = 23;
+            this.dgvCmdLivresListe.CurrentCellChanged += new System.EventHandler(this.dgvCmdLivresListe_CurrentCellChanged);
             // 
             // label80
             // 
@@ -2482,6 +2429,7 @@ namespace MediaTekDocuments.view
             this.btsValidModifEtapeSuivi.TabIndex = 6;
             this.btsValidModifEtapeSuivi.Text = "Valider";
             this.btsValidModifEtapeSuivi.UseVisualStyleBackColor = true;
+            this.btsValidModifEtapeSuivi.Click += new System.EventHandler(this.btsValidModifEtapeSuivi_Click);
             // 
             // txbEtapeSuivi
             // 
@@ -2551,516 +2499,13 @@ namespace MediaTekDocuments.view
             this.label60.Size = new System.Drawing.Size(0, 21);
             this.label60.TabIndex = 0;
             // 
-            // tabCommandesDvd
-            // 
-            this.tabCommandesDvd.Controls.Add(this.groupBox5);
-            this.tabCommandesDvd.Location = new System.Drawing.Point(4, 22);
-            this.tabCommandesDvd.Name = "tabCommandesDvd";
-            this.tabCommandesDvd.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCommandesDvd.Size = new System.Drawing.Size(1301, 1024);
-            this.tabCommandesDvd.TabIndex = 6;
-            this.tabCommandesDvd.Text = "Commandes DVD";
-            this.tabCommandesDvd.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.dgvCommandesDvdListe);
-            this.groupBox5.Controls.Add(this.groupBox6);
-            this.groupBox5.Controls.Add(this.label64);
-            this.groupBox5.Controls.Add(this.groupBox7);
-            this.groupBox5.Controls.Add(this.groupBox8);
-            this.groupBox5.Controls.Add(this.button8);
-            this.groupBox5.Controls.Add(this.textBox28);
-            this.groupBox5.Controls.Add(this.label96);
-            this.groupBox5.Controls.Add(this.label97);
-            this.groupBox5.Location = new System.Drawing.Point(7, 12);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1302, 1000);
-            this.groupBox5.TabIndex = 1;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Recherches";
-            // 
-            // dgvCommandesDvdListe
-            // 
-            this.dgvCommandesDvdListe.AllowUserToAddRows = false;
-            this.dgvCommandesDvdListe.AllowUserToDeleteRows = false;
-            this.dgvCommandesDvdListe.AllowUserToResizeColumns = false;
-            this.dgvCommandesDvdListe.AllowUserToResizeRows = false;
-            this.dgvCommandesDvdListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCommandesDvdListe.Location = new System.Drawing.Point(6, 444);
-            this.dgvCommandesDvdListe.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCommandesDvdListe.MultiSelect = false;
-            this.dgvCommandesDvdListe.Name = "dgvCommandesDvdListe";
-            this.dgvCommandesDvdListe.ReadOnly = true;
-            this.dgvCommandesDvdListe.RowHeadersVisible = false;
-            this.dgvCommandesDvdListe.RowHeadersWidth = 62;
-            this.dgvCommandesDvdListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCommandesDvdListe.Size = new System.Drawing.Size(1266, 277);
-            this.dgvCommandesDvdListe.TabIndex = 24;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.label65);
-            this.groupBox6.Controls.Add(this.textBox2);
-            this.groupBox6.Controls.Add(this.textBox4);
-            this.groupBox6.Controls.Add(this.textBox5);
-            this.groupBox6.Controls.Add(this.textBox6);
-            this.groupBox6.Controls.Add(this.textBox19);
-            this.groupBox6.Controls.Add(this.textBox20);
-            this.groupBox6.Controls.Add(this.textBox21);
-            this.groupBox6.Controls.Add(this.textBox22);
-            this.groupBox6.Controls.Add(this.textBox23);
-            this.groupBox6.Controls.Add(this.label81);
-            this.groupBox6.Controls.Add(this.pictureBox2);
-            this.groupBox6.Controls.Add(this.label82);
-            this.groupBox6.Controls.Add(this.label83);
-            this.groupBox6.Controls.Add(this.label84);
-            this.groupBox6.Controls.Add(this.label85);
-            this.groupBox6.Controls.Add(this.label86);
-            this.groupBox6.Controls.Add(this.label87);
-            this.groupBox6.Controls.Add(this.label88);
-            this.groupBox6.Controls.Add(this.label89);
-            this.groupBox6.Location = new System.Drawing.Point(7, 69);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(1288, 339);
-            this.groupBox6.TabIndex = 23;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Informations détaillées";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(836, 15);
-            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(66, 19);
-            this.label65.TabIndex = 33;
-            this.label65.Text = "Image :";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(662, 28);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(148, 26);
-            this.textBox2.TabIndex = 32;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(225, 298);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(584, 26);
-            this.textBox4.TabIndex = 31;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(225, 263);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(308, 26);
-            this.textBox5.TabIndex = 30;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(225, 228);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(308, 26);
-            this.textBox6.TabIndex = 29;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(225, 194);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(308, 26);
-            this.textBox19.TabIndex = 28;
-            // 
-            // textBox20
-            // 
-            this.textBox20.AcceptsReturn = true;
-            this.textBox20.Location = new System.Drawing.Point(225, 132);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox20.Multiline = true;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.ReadOnly = true;
-            this.textBox20.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox20.Size = new System.Drawing.Size(584, 52);
-            this.textBox20.TabIndex = 27;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(225, 97);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(308, 26);
-            this.textBox21.TabIndex = 26;
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(225, 62);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(584, 26);
-            this.textBox22.TabIndex = 25;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(225, 28);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.ReadOnly = true;
-            this.textBox23.Size = new System.Drawing.Size(148, 26);
-            this.textBox23.TabIndex = 24;
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.Location = new System.Drawing.Point(9, 194);
-            this.label81.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(68, 19);
-            this.label81.TabIndex = 22;
-            this.label81.Text = "Genre :";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(840, 37);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(425, 290);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.Location = new System.Drawing.Point(9, 228);
-            this.label82.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(68, 19);
-            this.label82.TabIndex = 19;
-            this.label82.Text = "Public :";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label83.Location = new System.Drawing.Point(9, 263);
-            this.label83.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(70, 19);
-            this.label83.TabIndex = 17;
-            this.label83.Text = "Rayon :";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label84.Location = new System.Drawing.Point(9, 62);
-            this.label84.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(56, 19);
-            this.label84.TabIndex = 8;
-            this.label84.Text = "Titre :";
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.Location = new System.Drawing.Point(9, 28);
-            this.label85.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(189, 19);
-            this.label85.TabIndex = 5;
-            this.label85.Text = "Numéro de document :";
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.Location = new System.Drawing.Point(9, 97);
-            this.label86.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(155, 19);
-            this.label86.TabIndex = 9;
-            this.label86.Text = "Réalisateur(trice) :";
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.Location = new System.Drawing.Point(9, 298);
-            this.label87.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(162, 19);
-            this.label87.TabIndex = 6;
-            this.label87.Text = "Chemin de l\'image :";
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.Location = new System.Drawing.Point(9, 132);
-            this.label88.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(92, 19);
-            this.label88.TabIndex = 10;
-            this.label88.Text = "Synopsis :";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.Location = new System.Drawing.Point(536, 28);
-            this.label89.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(67, 19);
-            this.label89.TabIndex = 7;
-            this.label89.Text = "Durée :";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(8, 421);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(106, 19);
-            this.label64.TabIndex = 22;
-            this.label64.Text = "Commandes";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.dateTimePicker2);
-            this.groupBox7.Controls.Add(this.button5);
-            this.groupBox7.Controls.Add(this.textBox24);
-            this.groupBox7.Controls.Add(this.textBox25);
-            this.groupBox7.Controls.Add(this.textBox26);
-            this.groupBox7.Controls.Add(this.label90);
-            this.groupBox7.Controls.Add(this.label91);
-            this.groupBox7.Controls.Add(this.label92);
-            this.groupBox7.Controls.Add(this.label93);
-            this.groupBox7.Location = new System.Drawing.Point(669, 759);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(603, 226);
-            this.groupBox7.TabIndex = 20;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Enregistrer une nouvelle commande";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(219, 159);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker2.TabIndex = 9;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(443, 190);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(144, 30);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Enregistrer";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // textBox24
-            // 
-            this.textBox24.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox24.Location = new System.Drawing.Point(219, 125);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(129, 26);
-            this.textBox24.TabIndex = 6;
-            // 
-            // textBox25
-            // 
-            this.textBox25.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox25.Location = new System.Drawing.Point(219, 87);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(98, 26);
-            this.textBox25.TabIndex = 5;
-            // 
-            // textBox26
-            // 
-            this.textBox26.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox26.Location = new System.Drawing.Point(219, 49);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(98, 26);
-            this.textBox26.TabIndex = 4;
-            // 
-            // label90
-            // 
-            this.label90.AutoSize = true;
-            this.label90.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label90.Location = new System.Drawing.Point(6, 165);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(166, 19);
-            this.label90.TabIndex = 3;
-            this.label90.Text = "Date de commande :";
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label91.Location = new System.Drawing.Point(6, 90);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(190, 19);
-            this.label91.TabIndex = 2;
-            this.label91.Text = "Nombre d\'exemplaires :";
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.Location = new System.Drawing.Point(6, 128);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(81, 19);
-            this.label92.TabIndex = 1;
-            this.label92.Text = "Montant :";
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label93.Location = new System.Drawing.Point(6, 52);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(184, 19);
-            this.label93.TabIndex = 0;
-            this.label93.Text = "Numero de document :";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.comboBox2);
-            this.groupBox8.Controls.Add(this.button6);
-            this.groupBox8.Controls.Add(this.button7);
-            this.groupBox8.Controls.Add(this.textBox27);
-            this.groupBox8.Controls.Add(this.label94);
-            this.groupBox8.Controls.Add(this.label95);
-            this.groupBox8.Location = new System.Drawing.Point(11, 759);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(603, 226);
-            this.groupBox8.TabIndex = 19;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Modifier une commande";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(251, 111);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(197, 26);
-            this.comboBox2.TabIndex = 8;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(9, 167);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(215, 30);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Supprimer la commande";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(438, 164);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(144, 30);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Valider";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // textBox27
-            // 
-            this.textBox27.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox27.Location = new System.Drawing.Point(251, 50);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(197, 26);
-            this.textBox27.TabIndex = 5;
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label94.Location = new System.Drawing.Point(15, 114);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(197, 19);
-            this.label94.TabIndex = 1;
-            this.label94.Text = "Modifier l\'etape de suivi :";
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label95.Location = new System.Drawing.Point(15, 53);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(126, 19);
-            this.label95.TabIndex = 0;
-            this.label95.Text = "Etape de suivi :";
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(449, 31);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(144, 30);
-            this.button8.TabIndex = 17;
-            this.button8.Text = "Rechercher";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // textBox28
-            // 
-            this.textBox28.Location = new System.Drawing.Point(301, 35);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(98, 26);
-            this.textBox28.TabIndex = 15;
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label96.Location = new System.Drawing.Point(13, 35);
-            this.label96.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(261, 19);
-            this.label96.TabIndex = 14;
-            this.label96.Text = "Saisir un numéro de document :";
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label97.Location = new System.Drawing.Point(6, 36);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(0, 21);
-            this.label97.TabIndex = 0;
-            // 
             // FrmMediatek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1334, 669);
+            this.ClientSize = new System.Drawing.Size(1360, 695);
             this.Controls.Add(this.tabOngletsApplication);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -3110,17 +2555,6 @@ namespace MediaTekDocuments.view
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownNbExemplairsNvlCmd)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tabCommandesDvd.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCommandesDvdListe)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3318,54 +2752,8 @@ namespace MediaTekDocuments.view
         private System.Windows.Forms.ComboBox cbxModifEtapeSuivi;
         private System.Windows.Forms.Button btnSupprCommande;
         private System.Windows.Forms.Button btsValidModifEtapeSuivi;
-        private System.Windows.Forms.TabPage tabCommandesDvd;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.Label label89;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.Label label90;
-        private System.Windows.Forms.Label label91;
-        private System.Windows.Forms.Label label92;
-        private System.Windows.Forms.Label label93;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.Label label95;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.Label label96;
-        private System.Windows.Forms.Label label97;
         private System.Windows.Forms.DataGridView dgvLivresListe;
         private System.Windows.Forms.DataGridView dgvCmdLivresListe;
-        private System.Windows.Forms.DataGridView dgvCommandesDvdListe;
         private System.Windows.Forms.TextBox txbDocNvlCmd;
         private System.Windows.Forms.NumericUpDown numUpDownNbExemplairsNvlCmd;
     }

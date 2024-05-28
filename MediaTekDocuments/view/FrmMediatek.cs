@@ -1329,7 +1329,10 @@ namespace MediaTekDocuments.view
                     MessageBox.Show("numéro introuvable");
                 }
                 CommandeDocument commandeDocument = lesCommandesDocument.Find(x => x.IdLivreDvd.Equals(txbLivresDocRecherche.Text));
-                if (commandeDocument != null)
+                List<CommandeDocument> lescommandes;
+                lescommandes = lesCommandesDocument.FindAll(x => x.IdLivreDvd.Equals(txbLivresDocRecherche.Text));
+
+                if (lescommandes.Count > 0)
                 {
                     AfficheCommandesLivre();
                 }
@@ -1391,34 +1394,15 @@ namespace MediaTekDocuments.view
         }
 
         /// <summary>
-        /// Sur la sélection d'une ligne ou cellule dans le grid
-        /// affichage des informations de la commande
-        /// et remplissage du combo des etapes de suivi modifiables en fonction de l'etape
+        /// Affichage de l'etape de suivi de la commande sélectionnée
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void dgvCmdLivresListe_SelectionChanged(object sender, EventArgs e)
+        /// <param name="commande">la commande</param>
+        private void dgvCmdLivresListe_CurrentCellChanged(object sender, EventArgs e)
         {
-
-            if (dgvCmdLivresListe.CurrentCell != null)
-            {
-                try
-                {
-                    CommandeDocument commande = (CommandeDocument)bdgCmdLivresListe.List[bdgCmdLivresListe.Position];
-                    AfficheEtapeSuivi(commande);
-                }
-                catch
-                {
-                    MessageBox.Show("Impossible d'afficher la commande");
-                }
-            }
-            else
-            {
-                VideLivresInfos();
-            }
+            CommandeDocument commande = (CommandeDocument)bdgCmdLivresListe.Current;
+            AfficheEtapeSuivi(commande);
+            RemplirComboEtapeSuivi(commande.EtapeSuivi);
         }
-
-  
 
         /// <summary>
         /// Permet de supprimer une commnde si elle n'est pas encore livree
@@ -1432,12 +1416,37 @@ namespace MediaTekDocuments.view
                 string etapeSuivi = commande.EtapeSuivi;
                 if(etapeSuivi == "en cours" || etapeSuivi == "relancée")
                 {
-                    controller.SupprCommande(commande);
+                    if (controller.SupprCommande(commande))
+                    {
+                        MessageBox.Show("La commande a bien été supprimée");
+                    }
+                    else
+                    {
+                        MessageBox.Show("La commande n'a pas été supprimée");
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Impossible de supprimer la commande");
                 }
+            }
+        }
+
+        /// <summary>
+        /// Permet de modifier le suivi d'une commnde sous certaine conditions
+        /// </summary>
+        private void btsValidModifEtapeSuivi_Click(object sender, EventArgs e)
+        {
+            CommandeDocument commande = (CommandeDocument)bdgCmdLivresListe.Current;
+            string id = commande.Id;
+            string etapeSuivi = commande.EtapeSuivi;
+            if (controller.ModifierSuivi(id, etapeSuivi))
+            {
+                MessageBox.Show("La commande a bien été modifiée");
+            }
+            else
+            {
+                MessageBox.Show("La commande n'a pas été modifiée");
             }
         }
 
@@ -1477,11 +1486,9 @@ namespace MediaTekDocuments.view
             }
         }
 
-        #endregion
 
-        #region Onglet Commandes DVD
-        #endregion
 
-        
+
+        #endregion
     }
 }

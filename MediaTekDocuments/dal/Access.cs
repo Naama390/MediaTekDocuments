@@ -35,7 +35,13 @@ namespace MediaTekDocuments.dal
         /// </summary>
         private const string POST = "POST";
         /// <summary>
+        /// méthode HTTP pour delete
+        /// </summary>
+        private const string DELETE = "DELETE";
+        /// <summary>
         /// méthode HTTP pour update
+        /// </summary>
+        private const string PUT = "PUT";
 
         /// <summary>
         /// Méthode privée pour créer un singleton
@@ -215,15 +221,16 @@ namespace MediaTekDocuments.dal
         /// <summary>
         /// Suppression d'une commande en base de données
         /// </summary>
-        /// <param name="commande">exemplaire à insérer</param>
+        /// <param name="commande">commande a supprimer</param>
         /// <returns>true si la suppression a pu se faire (retour != null)</returns>
             public bool SupprCommande(CommandeDocument commande)
         {
             String jsonCommande = JsonConvert.SerializeObject(commande, new CustomDateTimeConverter());
             try
             {
+                Console.WriteLine(uriApi + "lacommandedocument/" + jsonCommande);
                 // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<CommandeDocument> liste = TraitementRecup<CommandeDocument>(POST, "commande/" + jsonCommande);
+                List<CommandeDocument> liste = TraitementRecup<CommandeDocument>(DELETE, "lacommandedocument/" + jsonCommande);
                 return (liste != null);
             }
             catch (Exception ex)
@@ -234,13 +241,36 @@ namespace MediaTekDocuments.dal
         }
 
         /// <summary>
-        /// Traitement de la récupération du retour de l'api, avec conversion du json en liste pour les select (GET)
+        /// Modification d'une commande en base de données
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="methode">verbe HTTP (GET, POST, PUT, DELETE)</param>
-        /// <param name="message">information envoyée</param>
-        /// <returns>liste d'objets récupérés (ou liste vide)</returns>
-        private List<T> TraitementRecup<T> (String methode, String message)
+        /// <param name="commande">commande a modifier</param>
+        /// <returns>true si la suppression a pu se faire (retour != null)</returns>
+        public bool ModifierSuivi(string id, string etapeSuvi)
+        {
+            String jsonModifCommande = JsonConvert.SerializeObject(id);
+            String jsonModifCommandeS = JsonConvert.SerializeObject(etapeSuvi);
+            try
+            {
+                Console.WriteLine(uriApi + "suivi/" + jsonModifCommande + jsonModifCommandeS);
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<CommandeDocument> liste = TraitementRecup<CommandeDocument>(PUT, "suivi/" + jsonModifCommande + "/" + jsonModifCommandeS);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return false;
+        }
+
+            /// <summary>
+            /// Traitement de la récupération du retour de l'api, avec conversion du json en liste pour les select (GET)
+            /// </summary>
+            /// <typeparam name="T"></typeparam>
+            /// <param name="methode">verbe HTTP (GET, POST, PUT, DELETE)</param>
+            /// <param name="message">information envoyée</param>
+            /// <returns>liste d'objets récupérés (ou liste vide)</returns>
+            private List<T> TraitementRecup<T> (String methode, String message)
         {
             List<T> liste = new List<T>();
             try
